@@ -59,7 +59,7 @@ class IdleHandsLogoutService
     protected AccountInterface $currentUser;
 
     /**
-     * Constructs the RiseLogoutService
+     * Constructs the IdleHandsLogoutService
      * @param \Drupal\Core\Extension\ModuleHandlerInterface $module_handler
      *     The module handler.
      * @param \Drupal\Core\Config\ConfigFactoryInterface $configFactory
