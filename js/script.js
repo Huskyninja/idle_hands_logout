@@ -24,7 +24,7 @@
                 dialogTitle: dialogTitle,
                 documentTitle: documentTitle,
                 heartbeatCallback: (function (data, textStatus, jqXHR) {
-                    console.log('pulse');
+                    // console.log('pulse');
                 }),
                 heartbeatUrl: window.location.href,
                 heartRate: 30,
