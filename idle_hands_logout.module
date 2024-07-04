@@ -41,9 +41,9 @@ function idle_hands_logout_page_attachments(array &$page)
 
         if (!$userIsAnonymous && $userIsAuthenticated) {
             $page['#attached']['drupalSettings']['idle_hands_logout'] = $settings;
-            $page['#attached']['library'][]                     = 'idle_hands_logout/basil';
-            $page['#attached']['library'][]                     = 'idle_hands_logout/idleHands';
-            $page['#attached']['library'][]                     = 'idle_hands_logout/script';
+            $page['#attached']['library'][]                           = 'idle_hands_logout/basil';
+            $page['#attached']['library'][]                           = 'idle_hands_logout/idleHands';
+            $page['#attached']['library'][]                           = 'idle_hands_logout/script';
         }
 
     }
