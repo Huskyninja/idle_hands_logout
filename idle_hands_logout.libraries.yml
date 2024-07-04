@@ -1,0 +1,27 @@
+basil:
+    version: VERSION
+    header: true
+    js:
+        lib/basil.js/basil.js: {}
+    dependencies:
+        - core/jquery
+
+idleHands:
+    version: VERSION
+    header: true
+    js:
+        lib/jquery-idle-hands/jquery-idle-hands.js: {}
+    css:
+        theme:
+            lib/jquery-idle-hands/jquery-idle-hands.css: {}
+    dependencies:
+        - core/jquery
+        - idle_hands_logout/basil
+
+script:
+    version: VERSION
+    js:
+        js/script.js: {}
+    dependencies:
+        - core/jquery
+        - idle_hands_logout/idleHands

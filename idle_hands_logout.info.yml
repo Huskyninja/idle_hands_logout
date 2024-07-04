@@ -1,0 +1,6 @@
+name: "Idle Hands Logout"
+type: module
+description: "Logout user after inactive timeout using the JQuery Idle Hands script."
+package: "Other"
+core_version_requirement: ^10
+configure: idle_hands_logout.settings

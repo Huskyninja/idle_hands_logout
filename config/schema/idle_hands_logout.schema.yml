@@ -1,0 +1,40 @@
+idle_hands_logout.settings:
+    type: config_object
+    label: 'Idle Hands Logout Configuration'
+    mapping:
+        enabled:
+            type: boolean
+            label: 'Enable Idle Hands Logout'
+        maxInactivitySeconds:
+            type: integer
+            label: 'Max Inactivity'
+        inactivityDialogDuration:
+            type: integer
+            label: "Max Dialog Duration"
+        targetLogoutUrl:
+            type: string
+            label: 'Target Logout URL'
+        documentTitle:
+            type: string
+            label: 'Document Title'
+        dialogTitle:
+            type: string
+            label: 'Dialog Title'
+        dialogMessage:
+            type: text
+            label: 'Dialog Message'
+        showDialogTimer:
+            type: boolean
+            label: 'Show Dialog Timer'
+        dialogTimeRemainingLabel:
+            type: string
+            label: 'Dialog Timer Message'
+        stayLoggedInButtonText:
+            type: string
+            label: 'Stay Button Message'
+        logoutNowButtonText:
+            type: string
+            label: 'Logout Button Message'
+        checkSamlAuth:
+            type: boolean
+            label: 'Use SAML Auth'

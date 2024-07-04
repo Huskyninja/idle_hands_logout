@@ -1,0 +1,52 @@
+<?php
+
+use Drupal\user\Entity\User;
+
+/*
+ * Implements hook_page_attachments()
+ */
+function idle_hands_logout_page_attachments(array &$page)
+{
+
+    $settings = \Drupal::config('idle_hands_logout.settings');
+    $enabled  = $settings->get('enabled');
+
+    if ($enabled) {
+
+        $maxInactivitySeconds     = $settings->get('maxInactivitySeconds');
+        $inactivityDialogDuration = $settings->get('inactivityDialogDuration');
+        $documentTitle            = $settings->get('documentTitle');
+        $dialogTitle              = $settings->get('dialogTitle');
+        $dialogMessage            = $settings->get('dialogMessage');
+        $dialogTimeRemainingLabel = $settings->get('dialogTimeRemainingLabel');
+        $stayLoggedInButtonText   = $settings->get('stayLoggedInButtonText');
+        $logoutNowButtonText      = $settings->get('logoutNowButtonText');
+        $showDialogTimer          = $settings->get('showDialogTimer');
+
+        $settings = [
+            'maxInactivitySeconds'     => $maxInactivitySeconds,
+            'inactivityDialogDuration' => $inactivityDialogDuration,
+            'documentTitle'            => $documentTitle,
+            'dialogTitle'              => $dialogTitle,
+            'dialogMessage'            => $dialogMessage,
+            'dialogTimeRemainingLabel' => $dialogTimeRemainingLabel,
+            'stayLoggedInButtonText'   => $stayLoggedInButtonText,
+            'logoutNowButtonText'      => $logoutNowButtonText,
+            'showDialogTimer'          => $showDialogTimer,
+        ];
+
+        $user                = \Drupal::currentUser();
+        $userIsAuthenticated = $user->isAuthenticated();
+        $userIsAnonymous     = $user->isAnonymous();
+
+        if (!$userIsAnonymous && $userIsAuthenticated) {
+            $page['#attached']['drupalSettings']['idle_hands_logout'] = $settings;
+            $page['#attached']['library'][]                     = 'idle_hands_logout/basil';
+            $page['#attached']['library'][]                     = 'idle_hands_logout/idleHands';
+            $page['#attached']['library'][]                     = 'idle_hands_logout/script';
+        }
+
+    }
+    $page['#cache']['tags'][] = 'config:idle_hands_logout.settings';
+
+}

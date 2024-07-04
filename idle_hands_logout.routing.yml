@@ -1,0 +1,15 @@
+idle_hands_logout.main_logout:
+    path: '/idle_hands_logout/{showMessage}'
+    defaults:
+        _controller: '\Drupal\idle_hands_logout\Controller\IdleHandsLogoutController::idleHandsLogoutLogout'
+        showMessage: 1
+    requirements:
+        _access: 'TRUE'
+
+idle_hands_logout.settings:
+    path: '/admin/config/people/idle_hands_logout'
+    defaults:
+        _form: '\Drupal\idle_hands_logout\Form\IdleHandsLogoutSettingsForm'
+        _title: 'Idle Hands Logout'
+    requirements:
+        _permission: 'administer idle_hands_logout'

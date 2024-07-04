@@ -1,0 +1,6 @@
+services:
+    idle_hands_logout.service:
+        class: Drupal\idle_hands_logout\Service\IdleHandsLogoutService
+        tags:
+            - {name: idle_hands_logout_service}
+        arguments: ['@module_handler', '@config.factory', '@session_manager', '@current_user']

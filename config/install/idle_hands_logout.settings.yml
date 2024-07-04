@@ -1,0 +1,12 @@
+enabled: 0
+maxInactivitySeconds: '900'
+inactivityDialogDuration: '300'
+targetLogoutUrl: /user/login
+documentTitle: ''
+dialogTitle: 'Session Expiration Warning'
+dialogMessage: 'Your session is about to expire due to inactivity.'
+showDialogTimer: 1
+dialogTimeRemainingLabel: 'Time remaining'
+stayLoggedInButtonText: 'Stay Logged In'
+logoutNowButtonText: 'Logout Now'
+checkSamlAuth: 0

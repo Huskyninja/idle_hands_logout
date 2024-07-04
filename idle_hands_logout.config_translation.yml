@@ -1,0 +1,5 @@
+idle_hands_logout.config:
+    title: 'Idle Hands Logout'
+    base_route_name: idle_hands_logout.settings
+    names:
+        - idle_hands_logout.settings

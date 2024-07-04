@@ -1,0 +1,6 @@
+idle_hands_logout.set_admin:
+    title: 'Idle Hands Logout settings'
+    parent: user.admin_index
+    description: 'Configure settings for the Idle Hands Logout module'
+    weight: 0
+    route_name: idle_hands_logout.settings
