@@ -300,7 +300,7 @@ class IdleHandsLogoutSettingsForm extends ConfigFormBase
     public function submitForm(array &$form, FormStateInterface $form_state)
     {
 
-        $values             = $form_state->getValues();
+        $values                  = $form_state->getValues();
         $idleHandsLogoutSettings = $this->config('idle_hands_logout.settings');
 
         $idleHandsLogoutSettings
